@@ -1,0 +1,29 @@
+
+
+.url-shorter.loader{
+	
+	display: block;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    width: 25px;
+	background:url(loader.gif) no-repeat center center;
+
+}
+
+
+
+.url-shorter.wrapper{
+	
+	display: inline;
+    margin: 4px 0;
+    position: relative;
+
+
+}
+
+.url-shorter.hidden{
+	
+	display:none;
+	
+}
