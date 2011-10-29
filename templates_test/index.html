@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>jQuery Templates Test</title>
+    
+    <link rel="stylesheet" href="gallery.css" type="text/css" media="screen" charset="utf-8" />
+    
+    <script id="indexTmpl" type="text/x-jquery-tmpl">
+       <div class="item drop-shadow round ${status} ${user.userName}" data-channel="${user.userName}">
+          <div class="item-title">${title}(${totalViews})</div>
+          <div  class="item-image">
+             <a href="#${id}" title="${description}">
+                <strong class="${status}badgeLeft">LIVE</strong>
+                <img style="width:120px; height:90px" src="${imageUrl.small}" />
+             </a>
+          </div>
+          <div class="item-view-all-videos">
+            <a href="/#!/viewVideosByChannel/${id}/page/1" class="button">
+                Videos anteriores <span class="arrow-next"> </span>
+            </a>
+          </div>
+          <div id="embedTag${id}" style="display:none"></div>
+          </div>
+    </script>
+    
+    <script id="embedTagTmpl" type="text/x-jquery-tmpl">
+	
+         <div>{{html embedTag}}</div>
+		 
+    </script>
+</head>
+
+<body>
+  <div id="header">
+                <h1>
+                    <a href="index.html">jQuery Templates Test</a>
+                    
+                </h1>
+                <h3>Just for test!!!!!</h3>
+            </div>
+			<div id="nav">
+            
+   			 </div>
+            <div id="main">
+                 
+            </div>
+            <div class="ui-loader ui-body-a ui-corner-all" style="top: 312px;"><span class="ui-icon ui-icon-loading spin"></span><h1>loading</h1></div>
+                    <script src="js/LAB.min.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+			
+		
+		   $LAB
+		   .script("js/jquery.js").wait()
+		   .script("js/jquery.tmpl.min.js")
+		   .wait()
+		   .script("js/app.js");      
+        </script>
+</body>
+</html>
